@@ -81,6 +81,12 @@ img {
 .header-logo-wrapper .logo {
   display: inline-flex;
   align-items: baseline;
+  font-family: 'Stencil', 'Inter', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .header-right {
@@ -151,6 +157,9 @@ img {
   position: relative;
   min-height: 500px;
   margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
@@ -163,6 +172,8 @@ main {
   justify-content: center;
   gap: 2.5rem;
   flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-kicker {
@@ -767,7 +778,7 @@ textarea:focus {
 /* Mobile-first responsive design */
 @media (max-width: 480px) {
   body {
-    padding-top: 140px; /* Збільшено для компенсації висоти хедера на мобільних */
+    padding-top: 160px; /* Збільшено для компенсації висоти хедера на мобільних */
   }
 
   .header-inner {
@@ -790,6 +801,7 @@ textarea:focus {
   .hero {
     padding: 2rem 0 1.5rem;
     min-height: 400px;
+    margin-top: 0;
   }
 
   .hero h1 {
@@ -818,7 +830,7 @@ textarea:focus {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 130px; /* Компенсація для фіксованого хедера на планшетах */
+    padding-top: 150px; /* Компенсація для фіксованого хедера на планшетах */
   }
 
   .header-inner {
@@ -830,6 +842,17 @@ textarea:focus {
 
   .header-logo-section {
     width: 100%;
+  }
+
+  .header-logo-wrapper .logo,
+  .logo {
+    font-size: 3.5rem !important;
+    font-family: 'Stencil', 'Inter', sans-serif !important;
+    letter-spacing: 0.12em !important;
+    line-height: 1.1 !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
   }
 
   .header-right {
@@ -852,6 +875,11 @@ textarea:focus {
 
   .hero {
     margin-top: 0;
+  }
+
+  .hero {
+    margin-top: 0;
+    padding-top: 2.5rem;
   }
 
   .hero-inner {
