@@ -457,6 +457,55 @@ img {
   margin-top: 1rem;
 }
 
+.certifications {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.certifications-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.cert-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.cert-logo img {
+  max-width: 120px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(0);
+  transition: opacity 0.3s ease;
+}
+
+.cert-logo:hover img {
+  opacity: 0.8;
+}
+
+.cert-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #111827;
+  margin: 0;
+}
+
+.cert-desc {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
 .about-side {
   background: #f3f4f6;
   border-radius: 0.75rem;
@@ -585,22 +634,91 @@ textarea:focus {
 }
 
 .footer {
-  background: #111827;
-  color: #9ca3af;
-  padding: 1.5rem 0;
+  background: #ffffff;
+  color: #6b7280;
+  padding: 3rem 0 1.5rem;
   margin-top: 2rem;
+  border-top: 1px solid #e5e7eb;
 }
 
 .footer-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
   font-size: 0.85rem;
 }
 
-.footer-right {
-  text-align: right;
+.footer-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.footer-logo-wrapper {
+  display: inline-block;
+}
+
+.footer-logo {
+  font-family: 'Stencil', 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: baseline;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.footer-tagline {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.footer-rbq {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.footer-divider {
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0.5rem 0;
+}
+
+.footer-bottom {
+  text-align: left;
+  width: 100%;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.footer-brand {
+  color: #111827;
+  font-weight: 600;
+}
+
+.footer-text {
+  color: #6b7280;
+}
+
+.footer-link {
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #FF6B35;
 }
 
 .header-menu-wrapper {
@@ -635,12 +753,63 @@ textarea:focus {
   transform: translateY(0);
 }
 
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .header-inner {
+    padding: 0.75rem 1rem;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.7rem;
+  }
+
+  .hero {
+    padding: 2rem 0 1.5rem;
+    min-height: 400px;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .certifications-logos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cert-logo img {
+    max-width: 100px;
+    max-height: 60px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem 1.5rem;
+  }
+
+  .header-logo-section {
+    width: 100%;
   }
 
   .header-right {
@@ -654,6 +823,7 @@ textarea:focus {
     align-items: flex-start;
     gap: 0.5rem;
     flex: 1;
+    font-size: 0.85rem;
   }
 
   .header-contact-separator {
@@ -662,16 +832,61 @@ textarea:focus {
 
   .hero-inner {
     flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .about-layout,
   .contact-layout {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .certifications-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .footer-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .certifications-logos {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .lang-switch {
