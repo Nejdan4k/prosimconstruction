@@ -319,6 +319,13 @@ main {
   padding: 3rem 0;
 }
 
+/* Додатковий відступ для першої секції на мобільних */
+@media (max-width: 768px) {
+  main > .section:first-of-type {
+    padding-top: 2rem;
+  }
+}
+
 .section-alt {
   background: #f3f4f6;
 }
@@ -760,7 +767,7 @@ textarea:focus {
 /* Mobile-first responsive design */
 @media (max-width: 480px) {
   body {
-    padding-top: 120px; /* Збільшено для компенсації висоти хедера на мобільних */
+    padding-top: 140px; /* Збільшено для компенсації висоти хедера на мобільних */
   }
 
   .header-inner {
@@ -768,7 +775,12 @@ textarea:focus {
   }
 
   .logo {
-    font-size: 3rem;
+    font-size: 3.5rem; /* Такий самий розмір як на десктопі */
+    font-family: 'Stencil', 'Inter', sans-serif !important; /* Такий самий шрифт */
+    letter-spacing: 0.12em !important; /* Такий самий letter-spacing */
+    line-height: 1.1 !important; /* Такий самий line-height */
+    font-weight: 400 !important; /* Такий самий font-weight */
+    text-transform: uppercase !important; /* Такий самий text-transform */
   }
 
   .logo-tagline {
@@ -806,7 +818,7 @@ textarea:focus {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 110px; /* Компенсація для фіксованого хедера на планшетах */
+    padding-top: 130px; /* Компенсація для фіксованого хедера на планшетах */
   }
 
   .header-inner {
