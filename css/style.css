@@ -153,6 +153,10 @@ img {
   margin-top: 0;
 }
 
+main {
+  position: relative;
+}
+
 .hero-inner {
   display: flex;
   align-items: center;
@@ -756,7 +760,7 @@ textarea:focus {
 /* Mobile-first responsive design */
 @media (max-width: 480px) {
   body {
-    padding-top: 70px;
+    padding-top: 120px; /* Збільшено для компенсації висоти хедера на мобільних */
   }
 
   .header-inner {
@@ -801,6 +805,10 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 110px; /* Компенсація для фіксованого хедера на планшетах */
+  }
+
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -828,6 +836,10 @@ textarea:focus {
 
   .header-contact-separator {
     display: none;
+  }
+
+  .hero {
+    margin-top: 0;
   }
 
   .hero-inner {
