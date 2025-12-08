@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Prosim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Stencil&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="header-logo-section">
+        <div class="header-logo-wrapper">
+          <a href="index.html" class="logo"><span class="logo-pro">PR</span><span class="logo-o">O</span><span class="logo-sim">SIM</span></a>
+        </div>
+        <p class="logo-tagline">Après-sinistre et rénovation</p>
+      </div>
+      <div class="header-right">
+        <div class="header-contact">
+          <span class="header-contact-phone">(819) 921-4333</span>
+          <a href="mailto:simon@prosimconstruction.com" class="header-contact-email">simon@prosimconstruction.com</a>
+        </div>
+        <div class="header-menu-wrapper">
+          <button class="nav-toggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+    </div>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <p class="page-kicker">Une question ou un projet?</p>
+        <h1>Contactez Prosim Construction</h1>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="contact-info">
+          <h2>Coordonnées</h2>
+          <p><strong>Téléphone&nbsp;:</strong> (819) 921-4333</p>
+          <p><strong>Courriel&nbsp;:</strong> <a href="mailto:simon@prosimconstruction.com">simon@prosimconstruction.com</a></p>
+          <p class="small">
+            Prosim dessert la région de Gatineau et ses environs pour les travaux après-sinistre et de rénovation.
+          </p>
+        </div>
+        <form class="contact-form">
+          <div class="field">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" required />
+          </div>
+          <div class="field">
+            <label for="email">Courriel</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" name="tel" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <p class="small">
+            Ce formulaire est statique. Connectez-le à votre solution d’envoi de courriels (backend, service tiers, etc.).
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>Prosim © 2025 | Tous droits réservés.</p>
+      </div>
+      <div class="footer-right">
+        <p>RBQ: 5682‑7538‑01</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
